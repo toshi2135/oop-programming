@@ -74,10 +74,19 @@ namespace oop_programming
             */
 
             // Tinh chu vi tam giac 3 diem/toa do - OOP
+            /*
             TAM_GIAC ABC;
             ABC = new TAM_GIAC();
             ABC.NhapTamGiac("Nhap tam giac ABC: ");
             string chuoi = "Chu vi tam giac la " + ABC.TinhChuVi();
+            Console.WriteLine(chuoi);
+            */
+
+            // Tinh chu vi da giac n diem/toa do - OOP
+            DA_GIAC XYZ;
+            XYZ = new DA_GIAC();
+            XYZ.NhapSoDinh("Nhap da giac XYZ: ");
+            string chuoi = "Chu vi da giac la " + XYZ.TinhChuVi();
             Console.WriteLine(chuoi);
         }
     }
