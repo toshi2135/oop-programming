@@ -53,22 +53,31 @@ namespace oop_programming
             Console.WriteLine(chuoi);
             */
 
-            // Tinh chu vi tam giac 3 diem/toa do - OOP
-            TOA_DO a, b, c;
-            a = new TOA_DO();
-            b = new TOA_DO();
-            c = new TOA_DO();
+            // Tinh chu vi tam giac 3 diem/toa do - functional
+            /*
+            TOA_DO A, B, C;
+            A = new TOA_DO();
+            B = new TOA_DO();
+            C = new TOA_DO();
 
-            a.Nhap("Nhap diem A: ");
-            b.Nhap("Nhap diem B: ");
-            c.Nhap("Nhap diem C: ");
+            A.Nhap("Nhap diem A: ");
+            B.Nhap("Nhap diem B: ");
+            C.Nhap("Nhap diem C: ");
 
             double AB, AC, BC;
-            AB = a.TinhKhoangCach(b);
-            BC = b.TinhKhoangCach(c);
-            AC = c.TinhKhoangCach(a);
+            AB = A.TinhKhoangCach(B);
+            BC = B.TinhKhoangCach(C);
+            AC = C.TinhKhoangCach(A);
             double kq = AB + BC + AC;
             string chuoi = "Chu vi tam giac la " + kq;
+            Console.WriteLine(chuoi);
+            */
+
+            // Tinh chu vi tam giac 3 diem/toa do - OOP
+            TAM_GIAC ABC;
+            ABC = new TAM_GIAC();
+            ABC.NhapTamGiac("Nhap tam giac ABC: ");
+            string chuoi = "Chu vi tam giac la " + ABC.TinhChuVi();
             Console.WriteLine(chuoi);
         }
     }
