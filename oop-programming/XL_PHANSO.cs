@@ -1,6 +1,7 @@
 ﻿using System;
 namespace oop_programming
 {
+    // Khai bao du lieu
     public struct PHANSO
     {
         public int TuSo;
