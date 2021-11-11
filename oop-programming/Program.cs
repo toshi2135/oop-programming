@@ -6,7 +6,16 @@ namespace oop_programming
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PHANSO a, b;
+            a = XL_PHANSO.NhapPhanSo("Nhap phan so a:");
+            b = XL_PHANSO.NhapPhanSo("Nhap phan so b:");
+
+            PHANSO s;
+            s = XL_PHANSO.TinhTongPhanSo(a, b);
+
+            string chuoi = "Ket qua la " + XL_PHANSO.Xuat(s);
+
+            Console.WriteLine(chuoi);
         }
     }
 }
