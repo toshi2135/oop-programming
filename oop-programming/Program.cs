@@ -40,6 +40,7 @@ namespace oop_programming
             */
 
             // Tinh khoang cach 2 diem/toa do - OOP
+            /*
             TOA_DO a, b;
             a = new TOA_DO();
             b = new TOA_DO();
@@ -47,9 +48,27 @@ namespace oop_programming
             a.Nhap("Nhap diem A: ");
             b.Nhap("Nhap diem B: ");
 
-            double kq;
-            kq = a.TinhKhoangCach(b);
+            double kq = a.TinhKhoangCach(b);
             string chuoi = "Ket qua la " + kq;
+            Console.WriteLine(chuoi);
+            */
+
+            // Tinh chu vi tam giac 3 diem/toa do - OOP
+            TOA_DO a, b, c;
+            a = new TOA_DO();
+            b = new TOA_DO();
+            c = new TOA_DO();
+
+            a.Nhap("Nhap diem A: ");
+            b.Nhap("Nhap diem B: ");
+            c.Nhap("Nhap diem C: ");
+
+            double AB, AC, BC;
+            AB = a.TinhKhoangCach(b);
+            BC = b.TinhKhoangCach(c);
+            AC = c.TinhKhoangCach(a);
+            double kq = AB + BC + AC;
+            string chuoi = "Chu vi tam giac la " + kq;
             Console.WriteLine(chuoi);
         }
     }
