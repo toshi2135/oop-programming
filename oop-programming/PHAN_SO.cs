@@ -16,7 +16,21 @@ namespace oop_programming
             this.TuSo = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Nhap mau so: ");
-            this.TuSo = int.Parse(Console.ReadLine());
+            this.MauSo = int.Parse(Console.ReadLine());
+        }
+
+        public PHAN_SO CongPhanSo(PHAN_SO b)
+        {
+            PHAN_SO kq;
+            kq = new PHAN_SO();
+            kq.TuSo = this.TuSo * b.MauSo + this.MauSo * b.TuSo;
+            kq.MauSo = this.MauSo * b.MauSo;
+
+            return kq;
+        }
+        public string Xuat()
+        {
+            return $"{this.TuSo}/{this.MauSo}";
         }
     }
 }
