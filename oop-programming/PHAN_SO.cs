@@ -42,8 +42,23 @@ namespace oop_programming
             // this = Doi tuong de goi ham/thuc hien hanh dong
             this.TuSo = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Nhap mau so: ");
-            this.MauSo = int.Parse(Console.ReadLine());
+            int m = 0;
+            do
+            {
+                Console.WriteLine("Nhap mau so: ");
+                m = int.Parse(Console.ReadLine());
+            } while (m == 0);
+            this.MauSo = m;
+        }
+
+        public int LayTuSo()
+        {
+            return this.TuSo;
+        }
+
+        public int LayMauSo()
+        {
+            return this.MauSo;
         }
 
         public PHAN_SO CongPhanSo(PHAN_SO b)
