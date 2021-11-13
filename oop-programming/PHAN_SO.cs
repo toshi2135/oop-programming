@@ -9,11 +9,30 @@ namespace oop_programming
 
         // Thanh phan xu li
 
-        // Ham tao
+        // Ham tao (constructor)
         public PHAN_SO()
         {
             this.TuSo = 0;
             this.MauSo = 1;
+        }
+
+        public PHAN_SO(int t)
+        {
+            this.TuSo = t;
+            this.MauSo = 1;
+        }
+
+        public PHAN_SO(int t, int m)
+        {
+            this.TuSo = t;
+            if (m!=0)
+            {
+                this.MauSo = m;
+            }
+            else
+            {
+                this.MauSo = 1;
+            }
         }
 
         public void Nhap(string ghiChu)

@@ -7,6 +7,18 @@ namespace oop_programming
         public int x;
         public int y;
 
+        public TOA_DO()
+        {
+            this.x = 0;
+            this.y = 0;
+        }
+
+        public TOA_DO(int x0, int y0)
+        {
+            this.x = x0;
+            this.y = y0;
+        }
+
         // Thanh phan xu li
         public void Nhap(string ghiChu)
         {
