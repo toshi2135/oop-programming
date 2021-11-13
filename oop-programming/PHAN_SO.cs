@@ -4,8 +4,8 @@ namespace oop_programming
     public class PHAN_SO
     {
         // Thanh phan du lieu
-        public int TuSo;
-        public int MauSo;
+        private int TuSo;
+        private int MauSo;
 
         // Thanh phan xu li
 
