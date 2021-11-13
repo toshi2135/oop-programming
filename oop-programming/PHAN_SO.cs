@@ -8,6 +8,14 @@ namespace oop_programming
         public int MauSo;
 
         // Thanh phan xu li
+
+        // Ham tao
+        public PHAN_SO()
+        {
+            this.TuSo = 0;
+            this.MauSo = 1;
+        }
+
         public void Nhap(string ghiChu)
         {
             Console.WriteLine(ghiChu);
