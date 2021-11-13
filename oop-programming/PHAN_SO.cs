@@ -61,6 +61,14 @@ namespace oop_programming
             return this.MauSo;
         }
 
+        public void GanMauSo(int m)
+        {
+            if (m!=0)
+            {
+                this.MauSo = m;
+            }
+        }
+
         public PHAN_SO CongPhanSo(PHAN_SO b)
         {
             PHAN_SO kq;
