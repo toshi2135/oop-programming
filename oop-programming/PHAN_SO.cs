@@ -69,6 +69,33 @@ namespace oop_programming
             }
         }
 
+        public int TU_SO
+        {
+            get
+            {
+                return this.TuSo;
+            }
+            set
+            {
+                this.TuSo = value;
+            }
+        }
+
+        public int MAU_SO
+        {
+            get
+            {
+                return this.MauSo;
+            }
+            set
+            {
+                if (value != 0)
+                {
+                    this.MauSo = value;
+                }
+            }
+        }
+
         public PHAN_SO CongPhanSo(PHAN_SO b)
         {
             PHAN_SO kq;
