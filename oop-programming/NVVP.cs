@@ -24,6 +24,12 @@ namespace oop_programming
         public double HeSo { get; set; }
 
         // Thanh phan xu li
+        // Vi du ve hanm ao
+        public override void F_AO()
+        {
+            Console.WriteLine("Ham F_AO cua lop NVVP");
+        }
+
         public override void Nhap(string ghiChu)
         {
             base.Nhap(ghiChu);
@@ -36,11 +42,6 @@ namespace oop_programming
         public override double TinhLuong()
         {
             return this.heSo * 10 + this.phuCap;
-        }
-
-        public override void F_AO()
-        {
-            Console.WriteLine("Ham F_AO cua lop NVVP");
         }
     }
 }
