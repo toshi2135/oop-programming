@@ -31,7 +31,9 @@ namespace oop_programming
             return this.soLuongSP * 10;
         }
 
+        // Vi du ve ham ao
         // Cai dat lai ham F cua NHANVIEN
+        
         public new void F()
         {
             Console.WriteLine("Ham F cua lop NXSX");
