@@ -1,15 +1,13 @@
 ﻿using System;
 namespace oop_programming
 {
-    public class NVSX
+    public class NVSX : NHANVIEN
     {
         // Thanh phan du lieu
-        private string ma;
-        private string ten;
-        private string diaChi;
         private int soLuongSP;
 
         // Constructor
+        /*
         public NVSX(string maNV, string tenNV, string diaChiNV, int soLuongSPNV)
         {
             this.ma = maNV;
@@ -17,39 +15,15 @@ namespace oop_programming
             this.diaChi = diaChiNV;
             this.soLuongSP = soLuongSPNV;
         }
+        */
 
         // Properties
-        public string Ma
-        {
-            get { return ma; }
-            set { ma = value; }
-        }
-        public string Ten
-        {
-            get { return ten; }
-            set { ten = value; }
-        }
-        public string DiaChi
-        {
-            get { return diaChi; }
-            set { diaChi = value; }
-        }
-        public int SoLuongSP
-        {
-            get { return soLuongSP; }
-            set { soLuongSP = value; }
-        }
+        public int SoLuongSP { get; set; }
         
         // Thanh phan xu li
         public void NhapNhanVien (string ghiChu)
         {
-            Console.WriteLine(ghiChu);
-            Console.WriteLine("Nhap ma nhan vien: ");
-            this.ma = Console.ReadLine();
-            Console.WriteLine("Nhap ten nhan vien: ");
-            this.ten = Console.ReadLine();
-            Console.WriteLine("Nhap dia chi nhan vien: ");
-            this.diaChi = Console.ReadLine();
+            this.Nhap(ghiChu);
             Console.WriteLine("Nhap so luong san pham: ");
             this.soLuongSP = int.Parse(Console.ReadLine());
         }
