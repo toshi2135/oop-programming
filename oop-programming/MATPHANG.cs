@@ -58,7 +58,7 @@ namespace oop_programming
                     hinh = new HINHCHUNHAT();
                 }
 
-                hinh.Nhap("Nhap hinh");
+                hinh.Nhap($"Nhap hinh thu {i + 1}");
                 this.dsHinh.Add(hinh);
             }
 
@@ -67,6 +67,7 @@ namespace oop_programming
         public double TinhTongChuVi()
         {
             double S = 0;
+            /*
             for (int i = 0; i < this.dsHINHTRON.Length; i++)
             {
                 S += this.dsHINHTRON[i].TinhChuVi();
@@ -74,6 +75,12 @@ namespace oop_programming
             for (int i = 0; i < this.dsHINHCHUNHAT.Length; i++)
             {
                 S += this.dsHINHCHUNHAT[i].TinhChuVi();
+            }
+            */
+
+            for (int i = 0; i < this.dsHinh.Count; i++)
+            {
+                S += this.dsHinh[i].TinhChuVi();
             }
             return S;
         }

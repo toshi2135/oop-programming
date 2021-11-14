@@ -103,6 +103,7 @@ namespace oop_programming
             // NVSX sx;
             // NVSX sx = new NVSX();
             // sx.F_AO();
+            /*
             NHANVIEN nv;
 
             nv = new NVSX();
@@ -112,6 +113,13 @@ namespace oop_programming
             nv = new NVVP();
             nv.F();
             nv.F_AO();
+            */
+
+            // Nhap thong tin MATPHANG, tinh tong chu vi
+            MATPHANG mp = new MATPHANG();
+            mp.Nhap("Nhap thong tin: ");
+            double kq = mp.TinhTongChuVi();
+            Console.WriteLine(kq);
         }
     }
 }
