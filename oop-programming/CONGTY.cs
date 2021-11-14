@@ -9,6 +9,10 @@ namespace oop_programming
         private NVVP[] dsNVVP;
 
         // Constructor
+        public CONGTY()
+        {
+
+        }
         public CONGTY(string tenCTY)
         {
             this.ten = tenCTY;
