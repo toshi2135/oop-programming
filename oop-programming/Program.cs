@@ -83,11 +83,21 @@ namespace oop_programming
             */
 
             // Tinh chu vi da giac n diem/toa do - OOP
+            /*
             DA_GIAC XYZ;
             XYZ = new DA_GIAC();
             XYZ.NhapSoDinh("Nhap da giac XYZ: ");
             string chuoi = "Chu vi da giac la " + XYZ.TinhChuVi();
             Console.WriteLine(chuoi);
+            */
+
+            // Nhap thong tin CONGTY, tinh tong luong
+            /*
+            CONGTY ct = new CONGTY();
+            ct.NhapCty("Nhap thong tin cong ty: ");
+            double kq = ct.TinhTongLuong();
+            Console.WriteLine(kq);
+            */
         }
     }
 }
