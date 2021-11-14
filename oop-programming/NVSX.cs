@@ -46,12 +46,17 @@ namespace oop_programming
             Console.WriteLine(ghiChu);
             Console.WriteLine("Nhap ma nhan vien: ");
             this.ma = Console.ReadLine();
-            Console.WriteLine("Nhap ma nhan vien: ");
+            Console.WriteLine("Nhap ten nhan vien: ");
             this.ten = Console.ReadLine();
-            Console.WriteLine("Nhap ma nhan vien: ");
+            Console.WriteLine("Nhap dia chi nhan vien: ");
             this.diaChi = Console.ReadLine();
-            Console.WriteLine("Nhap ma nhan vien: ");
+            Console.WriteLine("Nhap so luong san pham: ");
             this.soLuongSP = int.Parse(Console.ReadLine());
+        }
+
+        public double TinhLuong()
+        {
+            return this.SoLuongSP * 10;
         }
     }
 }
