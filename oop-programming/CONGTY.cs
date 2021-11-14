@@ -44,6 +44,7 @@ namespace oop_programming
                 this.dsNVSX[i].NhapNhanVien($"Nhap NVSX thu {i + 1}: ");
             }
             */
+
             int N;
             Console.WriteLine("Nhap so luong nhan vien: ");
             N = int.Parse(Console.ReadLine());
