@@ -4,25 +4,25 @@ namespace oop_programming
     public class NVSX
     {
         // Thanh phan du lieu
-        private string maNV;
+        private string ma;
         private string ten;
         private string diaChi;
         private int soLuongSP;
 
         // Constructor
-        public NVSX(string maNV, string ten, string diaChi, int soLuongSP)
+        public NVSX(string maNV, string tenNV, string diaChiNV, int soLuongSPNV)
         {
-            this.maNV = maNV;
-            this.ten = ten;
-            this.diaChi = diaChi;
-            this.soLuongSP = soLuongSP;
+            this.ma = maNV;
+            this.ten = tenNV;
+            this.diaChi = diaChiNV;
+            this.soLuongSP = soLuongSPNV;
         }
 
         // Properties
-        public string MaNV
+        public string Ma
         {
-            get { return maNV; }
-            set { maNV = value; }
+            get { return ma; }
+            set { ma = value; }
         }
         public string Ten
         {
@@ -45,7 +45,7 @@ namespace oop_programming
         {
             Console.WriteLine(ghiChu);
             Console.WriteLine("Nhap ma nhan vien: ");
-            this.maNV = Console.ReadLine();
+            this.ma = Console.ReadLine();
             Console.WriteLine("Nhap ma nhan vien: ");
             this.ten = Console.ReadLine();
             Console.WriteLine("Nhap ma nhan vien: ");
