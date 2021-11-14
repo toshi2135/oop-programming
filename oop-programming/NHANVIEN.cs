@@ -1,7 +1,7 @@
 ﻿using System;
 namespace oop_programming
 {
-    public class NHANVIEN
+    public abstract class NHANVIEN
     {
         // Thanh phan du lieu
         private string ma;
@@ -26,6 +26,17 @@ namespace oop_programming
         public string DiaChi { get; set; }
 
         // Thanh phan xu li
+        // Vi du ve ham ao
+        public void F()
+        {
+            Console.WriteLine("Ham F cua lop NHANVIEN");
+        }
+
+        public virtual void F_AO()
+        {
+            Console.WriteLine("Ham F_AO cua lop NHANVIEN");
+        }
+
         public virtual void Nhap(string ghiChu)
         {
             Console.WriteLine(ghiChu);
@@ -37,19 +48,6 @@ namespace oop_programming
             this.diaChi = Console.ReadLine();
         }
 
-        public virtual double TinhLuong()
-        {
-            return 0;
-        }
-
-        public void F()
-        {
-            Console.WriteLine("Ham F cua lop NHANVIEN");
-        }
-
-        public virtual void F_AO()
-        {
-            Console.WriteLine("Ham F_AO cua lop NHANVIEN");
-        }
+        public abstract double TinhLuong();
     }
 }

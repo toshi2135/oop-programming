@@ -1,7 +1,7 @@
 ﻿using System;
 namespace oop_programming
 {
-    public class HINH
+    public abstract class HINH
     {
         // Thanh phan du lieu
         // Properties
@@ -26,9 +26,6 @@ namespace oop_programming
             this.MauSac = Console.ReadLine();
         }
 
-        public virtual double TinhChuVi()
-        {
-            return 0;
-        }
+        public abstract double TinhChuVi();
     }
 }
