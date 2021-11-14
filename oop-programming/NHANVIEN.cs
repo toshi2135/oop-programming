@@ -26,7 +26,7 @@ namespace oop_programming
         public string DiaChi { get; set; }
 
         // Thanh phan xu li
-        public void Nhap(string ghiChu)
+        public virtual void Nhap(string ghiChu)
         {
             Console.WriteLine(ghiChu);
             Console.WriteLine("Nhap ma nhan vien: ");
@@ -35,6 +35,11 @@ namespace oop_programming
             this.ten = Console.ReadLine();
             Console.WriteLine("Nhap dia chi nhan vien: ");
             this.diaChi = Console.ReadLine();
+        }
+
+        public virtual double TinhLuong()
+        {
+            return 0;
         }
 
         public void F()

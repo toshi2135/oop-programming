@@ -19,14 +19,14 @@ namespace oop_programming
 
         
         // Thanh phan xu li
-        public void NhapNhanVien (string ghiChu)
+        public override void Nhap(string ghiChu)
         {
-            this.Nhap(ghiChu);
+            base.Nhap(ghiChu);
             Console.WriteLine("Nhap so luong san pham: ");
             this.soLuongSP = int.Parse(Console.ReadLine());
         }
 
-        public double TinhLuong()
+        public override double TinhLuong()
         {
             return this.soLuongSP * 10;
         }
