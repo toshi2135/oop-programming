@@ -13,7 +13,7 @@ namespace oop_programming
         {
         }
 
-        public void NhapHinhChuNhat(string ghiChu)
+        public override void Nhap(string ghiChu)
         {
             base.Nhap(ghiChu);
             this.A = new TOA_DO();
@@ -24,7 +24,7 @@ namespace oop_programming
             this.Rong = int.Parse(Console.ReadLine());
         }
 
-        public double TinhChuVi()
+        public override double TinhChuVi()
         {
             return (this.Dai + this.Rong) * 2;
         } 

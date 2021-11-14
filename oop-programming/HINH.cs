@@ -15,7 +15,7 @@ namespace oop_programming
         {
         }
 
-        public void Nhap(string ghiChu)
+        public virtual void Nhap(string ghiChu)
         {
             Console.WriteLine(ghiChu);
             Console.WriteLine("Nhap ma: ");
@@ -24,6 +24,11 @@ namespace oop_programming
             this.Ten = Console.ReadLine();
             Console.WriteLine("Nhap ma: ");
             this.MauSac = Console.ReadLine();
+        }
+
+        public virtual double TinhChuVi()
+        {
+            return 0;
         }
     }
 }
