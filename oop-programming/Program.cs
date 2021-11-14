@@ -98,6 +98,20 @@ namespace oop_programming
             double kq = ct.TinhTongLuong();
             Console.WriteLine(kq);
             */
+
+            // Tinh da hinh
+            // NVSX sx;
+            // NVSX sx = new NVSX();
+            // sx.F_AO();
+            NHANVIEN nv;
+
+            nv = new NVSX();
+            nv.F();
+            nv.F_AO();
+
+            nv = new NVVP();
+            nv.F();
+            nv.F_AO();
         }
     }
 }

@@ -36,5 +36,15 @@ namespace oop_programming
             Console.WriteLine("Nhap dia chi nhan vien: ");
             this.diaChi = Console.ReadLine();
         }
+
+        public void F()
+        {
+            Console.WriteLine("Ham F cua lop NHANVIEN");
+        }
+
+        public virtual void F_AO()
+        {
+            Console.WriteLine("Ham F_AO cua lop NHANVIEN");
+        }
     }
 }

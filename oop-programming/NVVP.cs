@@ -37,5 +37,10 @@ namespace oop_programming
         {
             return this.heSo * 10 + this.phuCap;
         }
+
+        public override void F_AO()
+        {
+            Console.WriteLine("Ham F_AO cua lop NVVP");
+        }
     }
 }

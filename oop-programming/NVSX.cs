@@ -16,8 +16,7 @@ namespace oop_programming
             this.soLuongSP = soLuongSPNV;
         }
 
-        // Properties
-        public int SoLuongSP { get; set; }
+
         
         // Thanh phan xu li
         public void NhapNhanVien (string ghiChu)
@@ -29,7 +28,18 @@ namespace oop_programming
 
         public double TinhLuong()
         {
-            return this.SoLuongSP * 10;
+            return this.soLuongSP * 10;
+        }
+
+        // Cai dat lai ham F cua NHANVIEN
+        public new void F()
+        {
+            Console.WriteLine("Ham F cua lop NXSX");
+        }
+
+        public override void F_AO()
+        {
+            Console.WriteLine("Ham F_AO cua lop NVSX");
         }
     }
 }
