@@ -7,15 +7,14 @@ namespace oop_programming
         private int soLuongSP;
 
         // Constructor
-        /*
-        public NVSX(string maNV, string tenNV, string diaChiNV, int soLuongSPNV)
+        public NVSX()
         {
-            this.ma = maNV;
-            this.ten = tenNV;
-            this.diaChi = diaChiNV;
+
+        }
+        public NVSX(string maNV, string tenNV, string diaChiNV, int soLuongSPNV) : base(maNV, tenNV, diaChiNV)
+        {
             this.soLuongSP = soLuongSPNV;
         }
-        */
 
         // Properties
         public int SoLuongSP { get; set; }

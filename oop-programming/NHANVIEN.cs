@@ -9,16 +9,16 @@ namespace oop_programming
         private string diaChi;
 
         // Constructor
-        /*
-        public NVVP(string maNV, string tenNV, string diaChiNV, int phuCapNV, double heSoNV)
+        public NHANVIEN()
+        {
+
+        }
+        public NHANVIEN(string maNV, string tenNV, string diaChiNV)
         {
             this.ma = maNV;
             this.ten = tenNV;
             this.diaChi = diaChiNV;
-            this.phuCap = phuCapNV;
-            this.heSo = heSoNV;
         }
-        */
 
         // Properties
         public string Ma { get; set; }
