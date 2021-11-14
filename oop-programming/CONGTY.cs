@@ -18,8 +18,6 @@ namespace oop_programming
             this.ten = tenCTY;
         }
 
-        // Properties
-        public string TenCTY { get; set; }
 
         // Thanh phan xu li
         public void NhapCty(string ghiChu)
