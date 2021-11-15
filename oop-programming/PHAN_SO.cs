@@ -69,17 +69,7 @@ namespace oop_programming
             }
         }
 
-        public int TU_SO
-        {
-            get
-            {
-                return this.TuSo;
-            }
-            set
-            {
-                this.TuSo = value;
-            }
-        }
+        public int TU_SO_GON { get; set; }
 
         public int MAU_SO
         {
@@ -92,6 +82,10 @@ namespace oop_programming
                 if (value != 0)
                 {
                     this.MauSo = value;
+                }
+                else
+                {
+                    throw new MyException("Mau so khong duoc = 0");
                 }
             }
         }
