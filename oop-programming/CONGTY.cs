@@ -45,6 +45,7 @@ namespace oop_programming
             }
             */
 
+            // Viet lai bang tinh Da hinh
             int N;
             Console.WriteLine("Nhap so luong nhan vien: ");
             N = int.Parse(Console.ReadLine());
