@@ -7,6 +7,7 @@ namespace oop_programming
         private string ma;
         private string ten;
         private string diaChi;
+        protected LOAINHANVIEN loaiNhanVien;
 
         // Constructor
         public NHANVIEN()

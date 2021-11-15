@@ -14,6 +14,7 @@ namespace oop_programming
         public NVSX(string maNV, string tenNV, string diaChiNV, int soLuongSPNV) : base(maNV, tenNV, diaChiNV)
         {
             this.soLuongSP = soLuongSPNV;
+            this.loaiNhanVien = LOAINHANVIEN.NhanVienSanXuat;
         }
 
 
