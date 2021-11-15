@@ -28,4 +28,9 @@ namespace oop_programming
 
         public abstract double TinhChuVi();
     }
+    interface IFly
+    {
+        void Fly();
+        void Fly1();
+    }
 }

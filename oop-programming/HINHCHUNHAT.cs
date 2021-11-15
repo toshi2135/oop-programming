@@ -1,7 +1,7 @@
 ﻿using System;
 namespace oop_programming
 {
-    public class HINHCHUNHAT : HINH
+    public class HINHCHUNHAT : HINH, IFly
     {
         // Thanh phan du lieu
         // Properties
@@ -27,6 +27,15 @@ namespace oop_programming
         public override double TinhChuVi()
         {
             return (this.Dai + this.Rong) * 2;
-        } 
+        }
+
+        public void Fly()
+        {
+            Console.WriteLine("I Can Fly");
+        }
+        public void Fly1()
+        {
+            Console.WriteLine("I Can Fly 1");
+        }
     }
 }
