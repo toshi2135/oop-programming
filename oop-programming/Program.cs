@@ -1,26 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace oop_programming
 {
-    public class MyGenericArray<T>
-    {
-        private T[] array;
-
-        public MyGenericArray(int size)
-        {
-            array = new T[size + 1];
-        }
-        public T getItem(int index)
-        {
-            return array[index];
-        }
-        public void setItem(int index, T value)
-        {
-            array[index] = value;
-        }
-    }
-
     class Program
     {
         static void Main(string[] args)
@@ -135,61 +116,10 @@ namespace oop_programming
             */
 
             // Nhap thong tin MATPHANG, tinh tong chu vi
-            /*
             MATPHANG mp = new MATPHANG();
             mp.Nhap("Nhap thong tin: ");
             double kq = mp.TinhTongChuVi();
             Console.WriteLine(kq);
-            */
-
-            // Enums
-
-            // Exceptions
-            /*
-            int a, b;
-            a = 9;
-            b = 0;
-            try
-            {
-                double kq = a / b;
-                Console.WriteLine(kq);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Co loi: " + ex.Message);
-            }
-            */
-
-            // Tu tao Exception
-            /*
-            PHAN_SO t = new PHAN_SO();
-            try
-            {
-                t.TU_SO_GON = 2;
-                t.MAU_SO = 0;
-            }
-            catch (MyException ex)
-            {
-                Console.WriteLine("Khong gan duoc vi mau so = 0");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Co loi: " + ex.Message);
-            }
-            */
-
-            // Generic
-            /*
-            List<PHAN_SO> A = new List<PHAN_SO>();
-            List<int> Aint = new List<int>();
-            */
-            MyGenericArray<int> a = new MyGenericArray<int>(5);
-            a.setItem(0, 5);
-            int t = a.getItem(0);
-
-            MyGenericArray<TOA_DO> b = new MyGenericArray<TOA_DO>(5);
-            b.setItem(0, new TOA_DO());
-            TOA_DO d = b.getItem(0);
         }
     }
 }
