@@ -13,7 +13,7 @@ namespace HDT.Services
             this.LuuTruPhanSo = new LuuTruPhanSo();
         }
 
-        public void LuuPhanSo(XuLyPhanSo p)
+        public void LuuPhanSo(PhanSo p)
         {
             LuuTruPhanSo.LuuPhanSo(p);
         }
