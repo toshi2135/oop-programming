@@ -23,5 +23,10 @@ namespace HDT.Services
             }
             return dsSanPham;
         }
+
+        public void ThemSanPham(Product p)
+        {
+            LuuTruSanPham.ThemSanPham(p);
+        }
     }
 }

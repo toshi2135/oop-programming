@@ -1,0 +1,11 @@
+﻿@page
+@model WebApplication.Pages.MH_Them_SanPhamModel
+
+@* Them san pham *@
+<form method="post">
+    <label for="fname">Name:</label><br>
+    <input type="text" id="fname" name="name" value="@Model.Name"><br>
+    <label for="fname">Price:</label><br>
+    <input type="text" id="fname" name="price" value="@Model.Price"><br>
+    <input type="submit" value="Thêm">
+</form>
