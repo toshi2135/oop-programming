@@ -7,4 +7,10 @@
   <ItemGroup>
     <ProjectReference Include="..\HDT.Entities\HDT.Entities.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Newtonsoft.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
 </Project>
