@@ -1,27 +1,14 @@
 ﻿@* Hien thi du lieu tu Model len trang web *@
 @page
 @model WebApplication.Pages.MH_LuuTru_PhanSoModel
-@{
-    Layout = null;
-    if (Request.Method == "POST")
-    {
-    }
-}
 
-<!DOCTYPE html>
-<html>
-<body>
+<form method="post">
+    <label for="fname">X:</label><br>
+    <input type="text" id="fname" name="x" value="@Model.X"><br>
+    <label for="lname">Y:</label><br>
+    <input type="text" id="lname" name="y" value="@Model.Y"><br><br>
+    <input type="submit" value="Lưu">
+</form>
 
-    <h2>HTML Forms</h2>
+@Model.Chuoi
 
-    <form method="post">
-        <label for="fname">X:</label><br>
-        <input type="text" id="fname" name="x" value="@Model.X"><br>
-        <label for="lname">Y:</label><br>
-        <input type="text" id="lname" name="y" value="@Model.Y"><br><br>
-        <input type="submit" value="Lưu">
-    </form>
-
-    @Model.Chuoi
-</body>
-</html>
