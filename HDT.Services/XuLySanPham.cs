@@ -15,7 +15,8 @@ namespace HDT.Services
 
         public List<Product> TimKiemSanPham()
         {
-            var DsSanPham = LuuTruSanPham.DocDanhSachSanPham();
+            var dsSanPham = LuuTruSanPham.DocDanhSachSanPham();
+            return dsSanPham;
         }
     }
 }
