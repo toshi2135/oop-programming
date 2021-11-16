@@ -10,7 +10,7 @@ namespace HDT.DataAccess
         public void LuuPhanSo(PhanSo p)
         {
             string jsonString = JsonConvert.SerializeObject(p);
-            StreamWriter file = new StreamWriter("/Users/tuan.nguyen/Documents/GitHub/oop-programming/phanso.json");
+            StreamWriter file = new StreamWriter("/Users/tuan.nguyen/Documents/GitHub/oop-programming/data/phanso.json");
             file.Write(jsonString);
             file.Close();
         }
