@@ -1,18 +1,10 @@
-﻿@page
+﻿@* Hien thi du lieu tu Model len trang web *@
+@page
 @model WebApplication.Pages.MH_LuuTru_PhanSoModel
-@using HDT.Entities
-@using HDT.Services
 @{
     Layout = null;
     if (Request.Method == "POST")
     {
-        int x = int.Parse(Request.Form["x"]);
-        int y = int.Parse(Request.Form["y"]);
-
-        PhanSo p = new PhanSo(x, y);
-
-        var xuLyPhanSo = new XuLyPhanSo();
-        xuLyPhanSo.LuuPhanSo(p);
     }
 }
 
@@ -24,10 +16,12 @@
 
     <form method="post">
         <label for="fname">X:</label><br>
-        <input type="text" id="fname" name="x" value="1"><br>
+        <input type="text" id="fname" name="x" value="@Model.X"><br>
         <label for="lname">Y:</label><br>
-        <input type="text" id="lname" name="y" value="2"><br><br>
+        <input type="text" id="lname" name="y" value="@Model.Y"><br><br>
         <input type="submit" value="Lưu">
     </form>
+
+    @Model.Chuoi
 </body>
 </html>
