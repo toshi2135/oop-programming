@@ -6,13 +6,13 @@
     Layout = null;
     if (Request.Method == "POST")
     {
-        int x = int.Parse(Request.Query["x"]);
-        int y = int.Parse(Request.Query["y"]);
+        int x = int.Parse(Request.Form["x"]);
+        int y = int.Parse(Request.Form["y"]);
 
         PhanSo p = new PhanSo(x, y);
 
         var xuLyPhanSo = new XuLyPhanSo();
-        xuLyPhanSo.LuuPhanSo();
+        xuLyPhanSo.LuuPhanSo(p);
     }
 }
 
