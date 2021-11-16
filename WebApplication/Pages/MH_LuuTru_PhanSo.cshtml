@@ -1,0 +1,33 @@
+﻿@page
+@model WebApplication.Pages.MH_LuuTru_PhanSoModel
+@using HDT.Entities
+@using HDT.Services
+@{
+    Layout = null;
+    if (Request.Method == "POST")
+    {
+        int x = int.Parse(Request.Query["x"]);
+        int y = int.Parse(Request.Query["y"]);
+
+        PhanSo p = new PhanSo(x, y);
+
+        var xuLyPhanSo = new XuLyPhanSo();
+        xuLyPhanSo.LuuPhanSo();
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>HTML Forms</h2>
+
+    <form method="post">
+        <label for="fname">X:</label><br>
+        <input type="text" id="fname" name="x" value="1"><br>
+        <label for="lname">Y:</label><br>
+        <input type="text" id="lname" name="y" value="2"><br><br>
+        <input type="submit" value="Lưu">
+    </form>
+</body>
+</html>
