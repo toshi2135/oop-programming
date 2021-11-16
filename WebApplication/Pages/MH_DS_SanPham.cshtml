@@ -1,13 +1,23 @@
 ﻿@page
 @model WebApplication.Pages.MH_DS_SanPhamModel
-@{
-}
 
+@* Tim kiem san pham *@
+<form method="post">
+    <label for="fname">Keyword:</label><br>
+    <input type="text" id="fname" name="keyword" value="@Model.Keyword"><br>
+    <input type="submit" value="Tìm kiếm">
+</form>
+
+<div>
+    <a href="MH_Them_SanPham">Thêm Sản phẩm</a>
+</div>
+
+@* Liet ke danh sach san pham *@
 <table>
     <tr>
-        <th>Ma san pham</th>
-        <th>Ten san pham</th>
-        <th>Gia</th>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
     </tr>
     @foreach (var sanPham in Model.DsSanPham)
     {

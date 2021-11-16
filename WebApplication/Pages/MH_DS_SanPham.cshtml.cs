@@ -14,8 +14,10 @@ namespace WebApplication.Pages
         // Properties
         public List<Product> DsSanPham { get; set; }
         private XuLySanPham XuLySanPham { get; set; }
+        [BindProperty]
+        public string Keyword { get; set; }
         // Constructor
-        public MH_DS_SanPhamModel():base()
+        public MH_DS_SanPhamModel() : base()
         {
             XuLySanPham = new XuLySanPham();
         }
@@ -23,6 +25,11 @@ namespace WebApplication.Pages
         public void OnGet()
         {
             DsSanPham = XuLySanPham.TimKiemSanPham();
+        }
+
+        public void OnPost()
+        {
+            DsSanPham = XuLySanPham.TimKiemSanPham(Keyword);
         }
     }
 }
