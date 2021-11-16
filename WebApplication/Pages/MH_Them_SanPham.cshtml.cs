@@ -15,8 +15,11 @@ namespace WebApplication.Pages
         public string Name { get; set; }
         [BindProperty]
         public int Price { get; set; }
+
+        public string Chuoi { get; set; }
         public void OnGet()
         {
+            Chuoi = string.Empty;
         }
 
         public void OnPost()
@@ -27,6 +30,9 @@ namespace WebApplication.Pages
 
             var xuLySanPham = new XuLySanPham();
             xuLySanPham.ThemSanPham(p);
+
+            Chuoi = "Da luu thanh cong";
+            Response.Redirect("MH_DS_SanPham");
         }
     }
 }
