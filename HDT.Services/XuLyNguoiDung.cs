@@ -17,5 +17,18 @@ namespace HDT.Services
             u.NgayTao = DateTime.UtcNow;
             LuuTruNguoiDung.ThemNguoiDung(u);
         }
+
+        public User DangNhap(string Username, string Password)
+        {
+            var dsNguoiDung = LuuTruNguoiDung.DocDanhSachNguoiDung();
+            foreach (var user in dsNguoiDung)
+            {
+                if (user.Username == Username && user.Password == Password)
+                {
+                    return user;
+                }
+            }
+            return null;
+        }
     }
 }
