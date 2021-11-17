@@ -19,6 +19,7 @@ namespace WebApplication.Pages
         public int PId { get; set; }
 
         public string Chuoi { get; set; }
+
         public void OnGet()
         {
             var xuLySanPham = new XuLySanPham();
@@ -45,7 +46,7 @@ namespace WebApplication.Pages
             var xuLySanPham = new XuLySanPham();
             xuLySanPham.SuaSanPham(p);
 
-            Chuoi = "Da sua thanh cong";
+            Chuoi = "Đã sửa thành công";
             Response.Redirect("MH_DS_SanPham");
         }
     }
