@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@{
+    var userName = Context.Session.GetString("user");
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -43,8 +47,15 @@
                         </li>
                     </ul>
                 </div>
-                <a class="navbar-brand" asp-area="" asp-page="/MH_DangKy">Đăng ký</a>
-                <a class="navbar-brand" asp-area="" asp-page="/MH_DangNhap">Đăng nhập</a>
+                @if (string.IsNullOrEmpty(userName))
+                {
+                    <a class="navbar-brand" asp-area="" asp-page="/MH_DangKy">Đăng ký</a>
+                    <a class="navbar-brand" asp-area="" asp-page="/MH_DangNhap">Đăng nhập</a>
+                }
+                else
+                {
+                    <div>Xin chào @userName</div>
+                }
             </div>
         </nav>
     </header>

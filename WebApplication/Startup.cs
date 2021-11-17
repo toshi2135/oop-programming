@@ -23,6 +23,11 @@ namespace WebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession(config =>
+            {
+                config.Cookie.Name = "mySessionId";
+                config.IdleTimeout = new TimeSpan(0, 20, 0);
+            });
             services.AddRazorPages();
         }
 
@@ -46,6 +51,8 @@ namespace WebApplication
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

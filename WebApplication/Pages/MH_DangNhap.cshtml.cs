@@ -4,19 +4,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using HDT.Entities;
 using HDT.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApplication.Pages
 {
-    public class MH_DangKyModel : PageModel
+    public class MH_DangNhapModel : PageModel
     {
+        // Properties
         [BindProperty]
         public string Username { get; set; }
         [BindProperty]
         public string Password { get; set; }
-
         public string Chuoi { get; set; }
+        public List<User> DsNguoiDung { get; set; }
+        private XuLyNguoiDung XuLyNguoiDung { get; set; }
 
         public void OnGet()
         {
@@ -25,15 +28,18 @@ namespace WebApplication.Pages
 
         public void OnPost()
         {
-            User u = new User();
-            u.Username = Username;
-            u.Password = Password;
-
             var xuLyNguoiDung = new XuLyNguoiDung();
-            xuLyNguoiDung.ThemNguoiDung(u);
+            User u = xuLyNguoiDung.DangNhap(Username, Password);
 
-            Chuoi = "Đã đăng ký thành công!";
-            Response.Redirect("MH_DS_SanPham");
+            if (u != null)
+            {
+                HttpContext.Session.SetString("user", u.Username);
+                Response.Redirect("MH_DS_SanPham");
+            }
+            else
+            {
+                Chuoi = "Đăng nhập không thành công!";
+            }
         }
     }
 }
