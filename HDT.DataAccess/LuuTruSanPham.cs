@@ -39,5 +39,23 @@ namespace HDT.DataAccess
 
             file.Close();
         }
+
+        public Product DocSanPham(int id)
+        {
+            var dsSanPham = DocDanhSachSanPham();
+            return dsSanPham.FirstOrDefault(p => p.Id == id);
+        }
+
+        public void SuaSanPham(Product p0)
+        {
+            var dsSanPham = DocDanhSachSanPham();
+            var product = dsSanPham.FirstOrDefault(p => p.Id == p0.Id);
+            if (product != null)
+            {
+                product.Name = p0.Name;
+                product.Price = p0.Price;
+            }
+            LuuDanhSachSanPham(dsSanPham);
+        }
     }
 }
