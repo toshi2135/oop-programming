@@ -405,4 +405,4 @@ ASALocalRun/
 .localhistory/
 .vscode/launch.json
 .vscode/tasks.json
-data/
+./WebApplication/data/
