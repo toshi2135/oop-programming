@@ -1,2 +1,14 @@
 ﻿@page
 @model WebApplication.Pages.MH_Xoa_SanPhamModel
+
+@* Xoa san pham *@
+<form method="post">
+    <label for="fname">Name:</label><br>
+    <input type="text" id="fname" name="name" value="@Model.Name"><br>
+    <label for="fname">Price:</label><br>
+    <input type="text" id="fname" name="price" value="@Model.Price"><br>
+    <label for="fname">Bạn có muốn xóa sản phẩm này?</label><br>
+    <input type="submit" value="Xóa">
+</form>
+
+@Model.Chuoi

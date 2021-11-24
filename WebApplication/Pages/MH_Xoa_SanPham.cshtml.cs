@@ -11,10 +11,20 @@ namespace WebApplication.Pages
 {
     public class MH_Xoa_SanPhamModel : PageModel
     {
+        // Properties
         [BindProperty]
         public string Name { get; set; }
         [BindProperty]
         public int Price { get; set; }
+        [BindProperty]
+        public int Duration { get; set; }
+        [BindProperty]
+        public string Company { get; set; }
+        [BindProperty]
+        public int Year { get; set; }
+        [BindProperty]
+        public string TypeName { get; set; }
+
         [BindProperty(SupportsGet = true)]
         public int PId { get; set; }
 
@@ -28,10 +38,14 @@ namespace WebApplication.Pages
             {
                 Name = p.Name;
                 Price = p.Price;
+                Duration = p.Duration;
+                Company = p.Company;
+                Year = p.Year;
+                TypeName = p.TypeName;
             }
             else
             {
-                Chuoi = "San pham khong ton tai";
+                Chuoi = "Sản phẩm không tồn tại";
 
             }
         }
@@ -42,6 +56,10 @@ namespace WebApplication.Pages
             p.Id = PId;
             p.Name = Name;
             p.Price = Price;
+            p.Duration = Duration;
+            p.Company = Company;
+            p.Year = Year;
+            p.TypeName = TypeName;
 
             var xuLySanPham = new XuLySanPham();
             xuLySanPham.XoaSanPham(p);

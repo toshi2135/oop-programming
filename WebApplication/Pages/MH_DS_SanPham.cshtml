@@ -18,18 +18,26 @@
         <th>Mã sản phẩm</th>
         <th>Tên sản phẩm</th>
         <th>Giá</th>
+        <th>Hạn dùng</th>
+        <th>Công ty SX</th>
+        <th>Năm SX</th>
+        <th>Loại</th>
         <th>Actions</th>
     </tr>
     @foreach (var sanPham in Model.DsSanPham)
     {
-        <tr>
-            <td>@sanPham.Id</td>
-            <td>@sanPham.Name</td>
-            <td>@sanPham.Price</td>
-            <td>
-                <a href="MH_Sua_SanPham?pid=@sanPham.Id">Sửa</a>
-                <a href="MH_Xoa_SanPham?pid=@sanPham.Id">Xóa</a>
-            </td>
-        </tr>
+    <tr>
+        <td>@sanPham.Id</td>
+        <td>@sanPham.Name</td>
+        <td>@sanPham.Price</td>
+        <td>@sanPham.Duration</td>
+        <td>@sanPham.Company</td>
+        <td>@sanPham.Year</td>
+        <td>@sanPham.TypeName</td>
+        <td>
+            <a href="MH_Sua_SanPham?pid=@sanPham.Id">Sửa</a>
+            <a href="MH_Xoa_SanPham?pid=@sanPham.Id">Xóa</a>
+        </td>
+    </tr>
     }
 </table>

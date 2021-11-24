@@ -1,0 +1,10 @@
+﻿@page
+@model WebApplication.Pages.MH_Xoa_LoaiSanPhamModel
+
+@* Xoa loai san pham *@
+<form method="post">
+    <label for="fname">TypeName:</label><br>
+    <input type="text" id="fname" name="typename" value="@Model.TypeName"><br>
+    <label for="fname">Bạn có muốn xóa loại sản phẩm này?</label><br>
+    <input type="submit" value="Xóa">
+</form>

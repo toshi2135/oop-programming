@@ -3,9 +3,19 @@
 
 @* Them san pham *@
 <form method="post">
-    <label for="fname">Name:</label><br>
+    <label for="fname">Tên SP:</label><br>
     <input type="text" id="fname" name="name" value="@Model.Name"><br>
-    <label for="fname">Price:</label><br>
+    <label for="fname">Giá:</label><br>
     <input type="text" id="fname" name="price" value="@Model.Price"><br>
+    <label for="fname">Hạn dùng:</label><br>
+    <input type="text" id="fname" name="duration" value="@Model.Duration"><br>
+    <label for="fname">Công ty SX:</label><br>
+    <input type="text" id="fname" name="company" value="@Model.Company"><br>
+    <label for="fname">Năm SX:</label><br>
+    <input type="text" id="fname" name="year" value="@Model.Year"><br>
+    <label for="fname">Loại:</label><br>
+    <input type="text" id="fname" name="typename" value="@Model.TypeName"><br>
     <input type="submit" value="Thêm">
 </form>
+
+@Model.Chuoi

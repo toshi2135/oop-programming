@@ -8,12 +8,16 @@ namespace HDT.Services
 {
     public class XuLySanPham
     {
+        // Properties
         private LuuTruSanPham LuuTruSanPham { get; set; }
+
+        // Constructor
         public XuLySanPham()
         {
             LuuTruSanPham = new LuuTruSanPham();
         }
 
+        // Methods
         public List<Product> TimKiemSanPham(string Keyword = "")
         {
             var dsSanPham = LuuTruSanPham.DocDanhSachSanPham();
@@ -37,6 +41,11 @@ namespace HDT.Services
         public void SuaSanPham(Product p)
         {
             LuuTruSanPham.SuaSanPham(p);
+        }
+
+        public void XoaSanPham(Product p)
+        {
+            LuuTruSanPham.XoaSanPham(p);
         }
     }
 }

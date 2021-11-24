@@ -1,0 +1,10 @@
+﻿@page
+@model WebApplication.Pages.MH_Them_LoaiSanPhamModel
+@* Them loai san pham *@
+<form method="post">
+    <label for="fname">Tên Loại SP:</label><br>
+    <input type="text" id="fname" name="typename" value="@Model.TypeName"><br>
+    <input type="submit" value="Thêm">
+</form>
+
+@Model.Chuoi

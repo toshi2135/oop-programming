@@ -9,29 +9,29 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApplication.Pages
 {
-    public class MH_DS_SanPhamModel : PageModel
+    public class MH_DS_LoaiSanPhamModel : PageModel
     {
         // Properties
-        public List<Product> DsSanPham { get; set; }
-        private XuLySanPham XuLySanPham { get; set; }
+        public List<ProductType> DsLoaiSanPham { get; set; }
+        private XuLyLoaiSanPham XuLyLoaiSanPham { get; set; }
 
         [BindProperty]
         public string Keyword { get; set; }
 
         // Constructor
-        public MH_DS_SanPhamModel() : base()
+        public MH_DS_LoaiSanPhamModel() : base()
         {
-            XuLySanPham = new XuLySanPham();
+            XuLyLoaiSanPham = new XuLyLoaiSanPham();
         }
 
         public void OnGet()
         {
-            DsSanPham = XuLySanPham.TimKiemSanPham();
+            DsLoaiSanPham = XuLyLoaiSanPham.TimKiemLoaiSanPham();
         }
 
         public void OnPost()
         {
-            DsSanPham = XuLySanPham.TimKiemSanPham(Keyword);
+            DsLoaiSanPham = XuLyLoaiSanPham.TimKiemLoaiSanPham(Keyword);
         }
     }
 }

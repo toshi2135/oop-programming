@@ -40,8 +40,6 @@ namespace HDT.DataAccess
             LuuDanhSachSanPham(dsSanPham);
         }
 
-
-
         public Product DocSanPham(int id)
         {
             var dsSanPham = DocDanhSachSanPham();
@@ -51,13 +49,31 @@ namespace HDT.DataAccess
         public void SuaSanPham(Product p0)
         {
             var dsSanPham = DocDanhSachSanPham();
+
             var product = dsSanPham.FirstOrDefault(p => p.Id == p0.Id);
             if (product != null)
             {
                 product.Name = p0.Name;
                 product.Price = p0.Price;
+                product.Duration = p0.Duration;
+                product.Company = p0.Company;
+                product.Year = p0.Year;
+                product.TypeName = p0.TypeName;
             }
+
             LuuDanhSachSanPham(dsSanPham);
+        }
+
+        public void XoaSanPham(Product p0)
+        {
+            var dsSanPham = DocDanhSachSanPham();
+
+            var product = dsSanPham.FirstOrDefault(p => p.Id == p0.Id);
+            if (product != null)
+            {
+                dsSanPham.Remove(product);
+                LuuDanhSachSanPham(dsSanPham);
+            }
         }
     }
 }

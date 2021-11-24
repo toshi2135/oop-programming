@@ -1,0 +1,32 @@
+﻿@page
+@model WebApplication.Pages.MH_DS_LoaiSanPhamModel
+@* Tim kiem loai san pham *@
+<form method="post">
+    <label for="fname">Keyword:</label><br>
+    <input type="text" id="fname" name="keyword" value="@Model.Keyword"><br>
+    <input type="submit" value="Tìm kiếm">
+</form>
+
+<div>
+    <a href="MH_Them_LoaiSanPham">Thêm Loại sản phẩm</a>
+</div>
+
+@* Liet ke danh sach loai san pham *@
+<table>
+    <tr>
+        <th>Mã loại sản phẩm</th>
+        <th>Tên loại sản phẩm</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var loaiSanPham in Model.DsLoaiSanPham)
+    {
+        <tr>
+            <td>@loaiSanPham.Id</td>
+            <td>@loaiSanPham.TypeName</td>
+            <td>
+                <a href="MH_Sua_LoaiSanPham?pid=@loaiSanPham.Id">Sửa</a>
+                <a href="MH_Xoa_LoaiSanPham?pid=@loaiSanPham.Id">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>
