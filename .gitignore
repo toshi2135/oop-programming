@@ -406,3 +406,4 @@ ASALocalRun/
 .vscode/launch.json
 .vscode/tasks.json
 ./WebApplication/data/
+.DS_Store
